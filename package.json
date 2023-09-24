@@ -12,6 +12,9 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "elysia": "^0.7.12"
+    "@supabase/supabase-js": "^2.36.0",
+    "elysia": "^0.7.12",
+    "mongoose": "^7.5.2",
+    "supabase": "^1.99.5"
   }
 }
