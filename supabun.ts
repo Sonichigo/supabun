@@ -26,16 +26,26 @@ app.get('/fetch', () => {
     return (controller.Fetch());
 });
 
-app.get('/save', () => {
+app.post('/save', () => {
     const controller = new MongoIntegration();
     return (controller.Save());
+});
+
+app.put('/put', () => {
+    const controller = new MongoIntegration();
+    return (controller.Put());
+});
+
+app.delete('/delete', () => {
+    const controller = new MongoIntegration();
+    return (controller.Delete());
 });
 
 mongoose.connect('mongodb://localhost:27017/keploy', { 
     serverSelectionTimeoutMS: 5000  // timeout after 5 seconds
 })
 
-app.listen("6969")
+app.listen("420")
 
 
 console.log(`${logo} Elysia is running at on port ${app.server?.port}...`)
