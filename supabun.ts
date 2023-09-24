@@ -1,4 +1,5 @@
 import { Elysia } from 'elysia'
+import HelloController from './controller/hello'
 
 const logo  = `
        ▓██▓▄
@@ -13,10 +14,10 @@ const logo  = `
 `
 const app = new Elysia()
 
-app.get("/hello",()=>{
-    console.log("it came here")
-    return "Hello from supabase"
-})
+app.get('/hello', () => {
+    const controller = new HelloController();
+    return (controller.sayHello());
+});
 
 app.listen("6969")
 
