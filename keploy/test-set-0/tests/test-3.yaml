@@ -1,0 +1,32 @@
+version: api.keploy.io/v1beta2
+kind: Http
+name: test-3
+spec:
+    metadata: {}
+    req:
+        method: GET
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:420/fetch
+        header:
+            Accept: '*/*'
+            Host: localhost:420
+            User-Agent: curl/8.1.2
+        body: ""
+        body_type: ""
+    resp:
+        status_code: 200
+        header:
+            Content-Length: "80"
+            Content-Type: application/json
+            Date: Tue, 26 Sep 2023 05:45:22 GMT
+        body: '{"succes":{"_id":"65126fe26080972298f7bf19","name":"Cow","sound":"Moo","__v":0}}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+    objects: []
+    assertions:
+        noise:
+            - header.Date
+    created: 1695707123

@@ -1,0 +1,32 @@
+version: api.keploy.io/v1beta2
+kind: Http
+name: test-2
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:420/save
+        header:
+            Accept: '*/*'
+            Host: localhost:420
+            User-Agent: curl/8.1.2
+        body: ""
+        body_type: ""
+    resp:
+        status_code: 200
+        header:
+            Content-Length: "15"
+            Content-Type: application/json
+            Date: Tue, 26 Sep 2023 05:45:06 GMT
+        body: '{"succes":true}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+    objects: []
+    assertions:
+        noise:
+            - header.Date
+    created: 1695707106
