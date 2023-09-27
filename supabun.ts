@@ -2,8 +2,11 @@ import { Elysia } from 'elysia'
 import HelloController from './controller/hello'
 import * as mongoose from 'mongoose';
 import MongoIntegration from './controller/fetch'
+import cors from 'cors';
 
 const app = new Elysia()
+
+app.use(cors())
 
 app.get('/hello', () => {
     const controller = new HelloController();

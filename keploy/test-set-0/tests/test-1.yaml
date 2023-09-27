@@ -4,10 +4,10 @@ name: test-1
 spec:
     metadata: {}
     req:
-        method: GET
+        method: POST
         proto_major: 1
         proto_minor: 1
-        url: http://localhost:420/hello
+        url: http://localhost:420/save
         header:
             Accept: '*/*'
             Host: localhost:420
@@ -17,10 +17,10 @@ spec:
     resp:
         status_code: 200
         header:
-            Content-Length: "20"
-            Content-Type: text/plain;charset=utf-8
-            Date: Tue, 26 Sep 2023 05:44:39 GMT
-        body: Well this is working
+            Content-Length: "15"
+            Content-Type: application/json
+            Date: Wed, 27 Sep 2023 09:10:36 GMT
+        body: '{"succes":true}'
         body_type: ""
         status_message: ""
         proto_major: 0
@@ -29,4 +29,4 @@ spec:
     assertions:
         noise:
             - header.Date
-    created: 1695707080
+    created: 1695805842

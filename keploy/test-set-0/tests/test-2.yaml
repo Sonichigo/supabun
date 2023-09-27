@@ -4,10 +4,10 @@ name: test-2
 spec:
     metadata: {}
     req:
-        method: POST
+        method: GET
         proto_major: 1
         proto_minor: 1
-        url: http://localhost:420/save
+        url: http://localhost:420/fetch
         header:
             Accept: '*/*'
             Host: localhost:420
@@ -17,10 +17,10 @@ spec:
     resp:
         status_code: 200
         header:
-            Content-Length: "15"
+            Content-Length: "80"
             Content-Type: application/json
-            Date: Tue, 26 Sep 2023 05:45:06 GMT
-        body: '{"succes":true}'
+            Date: Wed, 27 Sep 2023 09:11:24 GMT
+        body: '{"succes":{"_id":"6513cfec0bc1a17a36c06337","name":"Cow","sound":"Moo","__v":0}}'
         body_type: ""
         status_message: ""
         proto_major: 0
@@ -29,4 +29,4 @@ spec:
     assertions:
         noise:
             - header.Date
-    created: 1695707106
+    created: 1695805889
